@@ -1,6 +1,6 @@
 # Dockerfile for Qihoo360/pika
 
-This Dockerfile is only tested for pika-v3.0.2 verison.
+This Dockerfile is tested for pika-v3.0.2 verison, and is for development/testing only, not tested in production.
 
 
 ## Usage
@@ -21,7 +21,12 @@ $ docker run --rm --name "PIKA" -v ${PWD}/db:/opt/pika-3.0.2/db -v ${PWD}/conf:/
 
 ```
 $ VERSION=v3.0.2 make build
+$ docker tag kerkerj/pika:v3.0.2 kerkerj/pika:3.0.2
+$ docker login
+$ docker push
 ```
+
+testing
 
 ```
 $ make test-run
